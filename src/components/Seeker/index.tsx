@@ -16,7 +16,7 @@ const SeekerForm = styled.form`
 export function SeekerProducts() {
   const [query, setQuery] = useState<string>("");
   const navigate = useRouter();
-  const res = useListProduct(query);
+  const res = useListProduct(query, 0);
 
   const handle = (e: any) => {
     e.preventDefault();

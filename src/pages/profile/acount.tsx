@@ -5,17 +5,17 @@ import { StrongLargeText } from "@/ui/text";
 import { Title } from "@/ui/title";
 
 export default function Acount() {
-  const { data } = useUserData();
+  const res: any = useUserData();
   return (
     <Layout title="Ecomerce | Profile">
       <section style={{ display: "flex", width: "100%" }}>
         <SideBarProfile />
         <main style={{ backgroundColor: "#152167", width: "100%" }}>
           <Title>Mi cuenta</Title>
-          <StrongLargeText>Usuario: {data.username}</StrongLargeText>
-          <StrongLargeText>Email: {data.email}</StrongLargeText>
-          <StrongLargeText>Direccion: {data.adress}</StrongLargeText>
-          <StrongLargeText>Telefono: {data.phone}</StrongLargeText>
+          <StrongLargeText>Usuario: {res?.data.username}</StrongLargeText>
+          <StrongLargeText>Email: {res?.data.email}</StrongLargeText>
+          <StrongLargeText>Direccion: {res?.data.adress}</StrongLargeText>
+          <StrongLargeText>Telefono: {res?.data.phone}</StrongLargeText>
         </main>
       </section>
     </Layout>

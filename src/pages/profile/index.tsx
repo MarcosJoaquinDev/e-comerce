@@ -3,12 +3,6 @@ import { SideBarProfile } from "@/components/Side-Bar";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 export default function Profile() {
-  const userMock = {
-    name: "Marcos",
-    lastname: "Acuña",
-    email: "marcos@gmail.com",
-    username: "marcosjoaquindev",
-  };
   const navigation = useRouter();
   useEffect(() => {
     if (!localStorage.getItem("token")) {

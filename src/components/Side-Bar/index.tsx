@@ -37,10 +37,10 @@ const HeaderProfile = ({ username }: any) => {
   );
 };
 export const SideBarProfile = () => {
-  const { data } = useUserData();
+  const res: any = useUserData();
   return (
     <aside style={{ backgroundColor: "#161d5c", height: "400px" }}>
-      <HeaderProfile username={data.username} />
+      <HeaderProfile username={res?.data.username} />
       <ListItem>
         <Link href="/profile/acount">
           <Item>
